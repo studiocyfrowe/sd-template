@@ -150,9 +150,13 @@ const MainLayout = ({ children }: LayoutProps) => {
                     <div className="relative z-10 min-h-0 flex-1 overflow-y-auto">
                         {children}
                     </div>
-
-                    <QuestionForm />
+                    <div className='md:block hidden'>
+                        <QuestionForm />
+                    </div>
                 </main>
+                <footer className='block md:hidden'>
+                    <QuestionForm />
+                </footer>
             </div>
         </div>
     )

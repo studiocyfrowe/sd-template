@@ -71,13 +71,13 @@ const HomeCarousel = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_40%)]" />
               </div>
 
-              <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl items-center gap-16">
+              <div className="relative z-10 mx-auto flex h-full w-full max-w-5xl items-center gap-16">
                 <div className="flex-1">
                   <p className="mb-5 text-sm uppercase tracking-[0.35em] text-neutral-400">
                     {slide.label}
                   </p>
 
-                  <h1 className="text-6xl font-semibold tracking-tight text-white xl:text-7xl">
+                  <h1 className="text-2xl lg:text-3xl xl:text-6xl font-semibold tracking-tight text-white xl:text-7xl">
                     {slide.title}
                   </h1>
 
