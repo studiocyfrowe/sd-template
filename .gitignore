@@ -42,3 +42,13 @@ next-env.d.ts
 
 
 .env
+.next
+.next/
+.next.zip
+node_modules
+out
+dist
+.env
+.env.local.next.zip 
+.next/ 
+node_modules/ 
