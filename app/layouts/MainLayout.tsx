@@ -47,7 +47,7 @@ const MainLayout = ({ children }: LayoutProps) => {
     return (
         <div className="min-h-screen overflow-hidden bg-background text-white dark:text-white">
             <div className="flex min-h-screen flex-col lg:grid lg:h-screen lg:grid-cols-[280px_1fr]">
-                <aside className="relative border-b border-white/10 bg-surface/40 backdrop-blur-2xl lg:flex lg:h-screen lg:flex-col lg:border-b-0 lg:border-r">
+                <aside className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-surface/80 backdrop-blur-2xl lg:relative lg:flex lg:h-screen lg:w-auto lg:flex-col lg:border-b-0 lg:border-r">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(217,70,239,0.12),transparent_40%)]" />
 
                     <div className="relative z-10 flex items-center justify-between px-5 py-5 lg:block">
@@ -136,7 +136,7 @@ const MainLayout = ({ children }: LayoutProps) => {
                     </div>
                 </aside>
 
-                <main className="relative flex min-h-[calc(100vh-180px)] flex-1 flex-col overflow-hidden bg-background lg:h-screen lg:min-h-0">
+                <main className="relative flex min-h-screen flex-1 flex-col overflow-hidden bg-background pt-[92px] pb-[96px] lg:h-screen lg:min-h-0 lg:pt-0 lg:pb-0">
                     <div className="pointer-events-none absolute inset-0">
                         <div className="absolute left-[-30%] top-[-10%] h-[360px] w-[360px] rounded-full bg-primary/20 blur-3xl lg:left-[-10%] lg:h-[500px] lg:w-[500px]" />
 
@@ -150,11 +150,13 @@ const MainLayout = ({ children }: LayoutProps) => {
                     <div className="relative z-10 min-h-0 flex-1 overflow-y-auto">
                         {children}
                     </div>
-                    <div className='md:block hidden'>
+
+                    <div className="hidden md:block">
                         <QuestionForm />
                     </div>
                 </main>
-                <footer className='block md:hidden'>
+
+                <footer className="fixed bottom-0 left-0 z-50 block w-full border-t border-white/10 bg-background/90 backdrop-blur-2xl md:hidden">
                     <QuestionForm />
                 </footer>
             </div>
